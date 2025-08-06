@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
+const screenWidth = Dimensions.get('screen').width;
 
 const styles = StyleSheet.create({
   container: {
@@ -46,5 +47,12 @@ const styles = StyleSheet.create({
   },
   albumviewTexStyle: { gap: 5 },
   artistname: { color: '#ffa500' },
+  imageView: {
+    height: screenWidth,
+    width: screenWidth,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imagestyle: { height: screenWidth, width: screenWidth },
 });
 export default styles;

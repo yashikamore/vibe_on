@@ -1,39 +1,20 @@
 import React from 'react';
-import {
-  Dimensions,
-  Image,
-  Linking,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Image, Linking, Text, TouchableOpacity, View } from 'react-native';
 import styles from './styles';
 import { Images } from '../../common/images';
 import { formatTime } from '../../common/methods';
 
-const screenWidth = Dimensions.get('screen').width;
-
 const SongDetails = ({ route }: any) => {
-  console.log(route);
   const { song } = route.params;
-
-  console.log();
   const imageURL = song?.artworkUrl100.replace('100x100', '1000x1000');
 
   return (
     <View style={styles.container}>
       <View style={styles.subView}>
-        <View
-          style={{
-            height: screenWidth,
-            width: screenWidth,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <View style={styles.imageView}>
           <Image
             source={{ uri: imageURL }}
-            style={{ height: screenWidth, width: screenWidth }}
+            style={styles.imagestyle}
             resizeMode="cover"
           />
           <TouchableOpacity
