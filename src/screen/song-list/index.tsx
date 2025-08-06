@@ -14,7 +14,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/roots';
 import styles from './styles';
 import { Song } from '../../common/types';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import Loader from '../../component/loader';
 type SongListNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   'SongList'
@@ -44,9 +44,7 @@ const SongList = () => {
   }, []);
 
   if (loading) {
-    return (
-      <ActivityIndicator size="large" color="#000" style={{ marginTop: 50 }} />
-    );
+    return <Loader color="#2196F3" />; // You can customize color & size
   }
 
   const renderItem = ({ item }: any) => {
@@ -60,7 +58,7 @@ const SongList = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <FlatList
         data={songs}
         keyExtractor={(item: any) => item.trackId.toString()}
@@ -69,8 +67,9 @@ const SongList = () => {
           <RefreshControl refreshing={refreshing} onRefresh={loadSongs} />
         }
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ gap: 10, paddingHorizontal: 12 }}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 export default SongList;

@@ -4,9 +4,8 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#545d7e',
     borderBottomColor: '#ddd',
-    elevation: 3,
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 2 },
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   headerFontStyle: {
     color: '#fff',

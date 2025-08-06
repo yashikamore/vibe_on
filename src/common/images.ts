@@ -4,4 +4,5 @@ export const Images = {
   play: require('../assets/play.png'),
   pause: require('../assets/pause.png'),
   back: require('../assets/back.png'),
+  splash: require('../assets/headphonebg.png'),
 };

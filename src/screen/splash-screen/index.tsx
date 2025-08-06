@@ -13,8 +13,7 @@ const SplashScreen = ({ navigation }: any) => {
 
   return (
     <View style={styles.container}>
-      <Image source={Images.headPhone} style={{ height: 100, width: 100 }} />
-      <Text style={styles.title}>VibeOn</Text>
+      <Image source={Images.splash} style={{ height: 100, width: 100 }} />
     </View>
   );
 };

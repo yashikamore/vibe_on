@@ -13,13 +13,13 @@ const Header: React.FC<CustomHeaderProps> = ({ title, onPress }) => {
   return (
     <SafeAreaView style={styles.header}>
       <View style={styles.subView}>
-        {onPress && (
-          <TouchableOpacity style={styles.butttonView} onPress={onPress}>
-            <Image source={Images.back} style={styles.iconStyle} />
-          </TouchableOpacity>
-        )}
         <Text style={styles.headerFontStyle}>{title}</Text>
       </View>
+      {onPress && (
+        <TouchableOpacity style={styles.butttonView} onPress={onPress}>
+          <Image source={Images.back} style={styles.iconStyle} />
+        </TouchableOpacity>
+      )}
     </SafeAreaView>
   );
 };

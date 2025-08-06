@@ -21,6 +21,11 @@ function RootStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="SplashScreen"
+        component={SplashScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         name="SongList"
         component={SongList}
         options={{

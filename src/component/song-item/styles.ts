@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     elevation: 2,
     backgroundColor: '#d3e3fd',
-    margin: 8,
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
