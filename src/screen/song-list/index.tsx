@@ -33,9 +33,7 @@ const SongList = () => {
       (a: Song, b: Song) =>
         new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime(),
     );
-
     setSongs(sorted);
-
     setLoading(false);
   };
 
@@ -44,7 +42,7 @@ const SongList = () => {
   }, []);
 
   if (loading) {
-    return <Loader color="#2196F3" />; // You can customize color & size
+    return <Loader color="#2196F3" />;
   }
 
   const renderItem = ({ item }: any) => {
